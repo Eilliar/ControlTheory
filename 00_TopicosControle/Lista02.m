@@ -92,7 +92,7 @@ tf1 = tf(num1, den1)
 disp('Função de transferência de 2:');
 [num2, den2] = ss2tf(A2, B2, C2, D2);
 tf2 = tf(num2, den2)
-disp('Função de transferência de 1:')
+disp('Função de transferência de 3:')
 [num3, den3] = ss2tf(A3, B3, C3, D3);
 tf3 = tf(num3, den3)
 
@@ -170,6 +170,8 @@ for d = 1: length(delta)
 end
 figure;
 plot(delta, CoRanks, 'o');
+title('Análise de Controlabilidade: |delta| <=1');
+xlabel('Delta'); ylabel('Rank da matriz de Controlabilidade');
 
 % Observabilidade
 gama = -1: 0.01: 1;
@@ -181,3 +183,5 @@ for o = 1: length(delta)
 end
 figure;
 plot(gama, ObRanks, 'rs')
+title('Análise de Observabildiade: |gama| <=1');
+xlabel('Gama'); ylabel('Rank da matriz de Observabilidade');

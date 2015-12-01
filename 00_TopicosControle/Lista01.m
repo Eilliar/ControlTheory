@@ -55,8 +55,3 @@ for k = 1: 5: 50
     step(MF, 250);
 end
 grid on;
-
-
-%% Exercício 02
-clc
-close all; clear all;
